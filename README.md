@@ -1,8 +1,31 @@
 # 🚀 JSON2Excel Deployment & AWS Cloud Comparison
 
-Bu repository, JSON2Excel projesinin production deployment dosyalarını ve AWS cloud karşılaştırma analizlerini içerir.
+[![AWS Analysis](https://img.shields.io/badge/AWS-Analysis-orange)](AWS-EN-UCUZ-PRICING-RAPORU.md)
+[![VDS Performance](https://img.shields.io/badge/VDS-88%2F100-brightgreen)](VDS-SUNUCU-TEST-RAPORU.md)
+[![Cost Savings](https://img.shields.io/badge/Savings-46x_vs_AWS-success)](EXECUTIVE-SUMMARY.md)
+[![Production Ready](https://img.shields.io/badge/Production-Ready-blue)](json2excel-deployment/production-ready/)
+
+> **TL;DR:** Mevcut VDS sunucumuz AWS EC2'den **46x daha ucuz** ve **88/100 performans skoru** ile mükemmel çalışıyor. AWS'e geçmeye gerek yok! 💰✨
+
+---
+
+## 📊 Hızlı Karşılaştırma
+
+| Sağlayıcı | Aylık Maliyet | vs VDS | Performans |
+|-----------|---------------|--------|------------|
+| **Mevcut VDS** | **254.90 TL** (~$7.50) | ⭐ Baseline | 88/100 🏆 |
+| AWS Lightsail | 119 TL ($3.50) | 2.1x ucuz | N/A |
+| Hetzner CX11 | 170 TL (€4.49) | 1.5x ucuz | N/A |
+| **AWS EC2 m5.2xlarge** | **11,628 TL** (~$342) | **46x pahalı** ❌ | N/A |
+
+**🎯 Karar:** Mevcut VDS'de kalın! → [Detaylı Analiz](EXECUTIVE-SUMMARY.md)
+
+---
 
 ## 📋 İçerik
+
+### 📊 **Executive Summary**
+- [**⚡ EXECUTIVE SUMMARY**](EXECUTIVE-SUMMARY.md) - Hızlı karar için özet rapor (önerilen başlangıç noktası!)
 
 ### 1. **AWS Fiyatlandırma Analizleri**
 - [AWS En Ucuz Fiyatlandırma Raporu](AWS-EN-UCUZ-PRICING-RAPORU.md) - AWS'de en düşük maliyetli hosting seçenekleri
