@@ -7,6 +7,7 @@ Bu repository, JSON2Excel projesinin production deployment dosyalarını ve AWS 
 ### 1. **AWS Fiyatlandırma Analizleri**
 - [AWS En Ucuz Fiyatlandırma Raporu](AWS-EN-UCUZ-PRICING-RAPORU.md) - AWS'de en düşük maliyetli hosting seçenekleri
 - [Cloud Karşılaştırma Analizi](cloud-comparison-analysis.md) - AWS vs VDS vs Hetzner vs DigitalOcean
+- [VDS Sunucu Test Raporu](VDS-SUNUCU-TEST-RAPORU.md) - Mevcut VDS sunucu benchmark ve güvenlik testi
 
 ### 2. **Production Deployment**
 - [Production Ready Package](production-ready/) - Tüm deployment scriptleri ve dokümantasyonları
