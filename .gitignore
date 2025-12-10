@@ -1,0 +1,37 @@
+# Sensitive files - DO NOT COMMIT
+*.env
+*.pem
+*.key
+*.crt
+*_rsa
+*_rsa.pub
+id_rsa*
+id_ed25519*
+.ssh/
+*.log
+*.tar.gz
+
+# Archive with sensitive data
+archive-old/
+json2excel-deployment/archive-old/
+
+# Backup files
+raspi5-backup/
+
+# Local development
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+~*

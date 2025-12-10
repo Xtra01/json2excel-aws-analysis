@@ -1,0 +1,28 @@
+#!/bin/bash
+
+###############################################################################
+# System Watchdog Systemd Service
+###############################################################################
+
+[Unit]
+Description=System Watchdog - Auto-recovery on Boot/Reboot
+Documentation=file:///usr/local/bin/system-watchdog.sh
+After=network-online.target json2excel.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/system-watchdog.sh
+RemainAfterExit=no
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=system-watchdog
+
+# Restart on failure
+Restart=on-failure
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target

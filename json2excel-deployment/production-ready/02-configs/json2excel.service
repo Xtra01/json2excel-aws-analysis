@@ -1,0 +1,44 @@
+# JSON2Excel Production Deployment
+# Professional systemd service configuration
+
+[Unit]
+Description=JSON2Excel Application Container Stack
+Documentation=https://github.com/yourusername/json2excel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory=/opt/json2excel
+User=root
+Group=root
+
+# Environment
+Environment="COMPOSE_HTTP_TIMEOUT=300"
+Environment="DOCKER_CLIENT_TIMEOUT=300"
+
+# Start command - Check if already running first
+ExecStartPre=/bin/sh -c 'docker compose -f /opt/json2excel/docker-compose.yml ps -q | grep -q . && echo "Already running" || exit 0'
+ExecStart=/bin/sh -c 'docker compose -f /opt/json2excel/docker-compose.yml ps -q | grep -q . || docker compose -f /opt/json2excel/docker-compose.yml up -d'
+
+# Stop command
+ExecStop=/usr/bin/docker compose -f /opt/json2excel/docker-compose.yml down
+
+# Reload command (graceful restart)
+ExecReload=/usr/bin/docker compose -f /opt/json2excel/docker-compose.yml restart
+
+# Restart policy
+Restart=on-failure
+RestartSec=10s
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=json2excel
+
+# Security
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
